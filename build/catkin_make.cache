@@ -1,0 +1,2 @@
+high_level:low_level
+-DCATKIN_DEVEL_PREFIX=/home/kdabek/ROSWorkspace/devel -DCMAKE_INSTALL_PREFIX=/home/kdabek/ROSWorkspace/install -G Unix Makefiles
