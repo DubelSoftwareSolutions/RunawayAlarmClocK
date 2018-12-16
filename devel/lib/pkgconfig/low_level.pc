@@ -5,4 +5,4 @@ Description: Description of low_level
 Version: 0.0.0
 Cflags: 
 Libs: -L/home/kdabek/ROSWorkspace/devel/lib 
-Requires: 
+Requires: message_generation message_runtime roscpp rospy std_msgs

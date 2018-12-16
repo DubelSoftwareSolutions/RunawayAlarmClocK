@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/kdabek/ROSWorkspace/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/kdabek/ROSWorkspace/devel/lib;/home/kdabek/ROSWorkspace/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(low_level_EXPORTED_TARGETS "")
+set(low_level_EXPORTED_TARGETS "low_level_generate_messages_cpp;low_level_generate_messages_eus;low_level_generate_messages_lisp;low_level_generate_messages_nodejs;low_level_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${low_level_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -160,7 +160,7 @@ foreach(t ${low_level_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_generation;message_runtime;roscpp;rospy;std_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND low_level_EXPORTED_TARGETS ${${low_level_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "low_level-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${low_level_DIR}/${extra})
