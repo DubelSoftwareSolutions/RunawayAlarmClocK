@@ -6,6 +6,8 @@ from low_level import PWM_msg
 
 QueueSize = 100
 PWM_Message = PWM_msg()
+subscriber = []
+publisher = []
 
 def Motor_callback(data):
 	if (data.Command == "forward"):
