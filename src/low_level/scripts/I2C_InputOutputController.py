@@ -13,7 +13,7 @@ GPIO.setup(ADC2I2C_PinNumber, GPIO.OUT)
 GPIO.setup(ADC3I2C_PinNumber, GPIO.OUT)
 
 def I2C_callback(data):
-	if (data.Device == "ADC1"):
+	if (data.Device == "LCD"):
 		GPIO_PinNumber = ADC1I2C_PinNumber
 	elif (data.Device == "ADC2"):
 		GPIO_PinNumber = ADC2I2C_PinNumber

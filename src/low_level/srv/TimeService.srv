@@ -1,3 +1,5 @@
 string Request
 ---
-time TimeNow
+string TimeNow
+string DateNow
+duration timestamp
