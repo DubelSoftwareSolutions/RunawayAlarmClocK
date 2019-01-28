@@ -51,16 +51,19 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
  add_message_files(
    FILES
-#   Message1.msg
-#   Message2.msg
+   LCD_msg.msg
+   Motor_msg.msg
+   PWM_msg.msg
+   GPIO_msg.msg
+   Keyboard_msg.msg
+   I2C_msg.msg
  )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   TimeService.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(

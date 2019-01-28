@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/high_level_generate_messages_eus"
+  "/home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/msg/EventInfo.l"
   "/home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/manifest.l"
 )
 

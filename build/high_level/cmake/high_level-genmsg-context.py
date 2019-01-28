@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = ""
+messages_str = "/home/kdabek/ROSWorkspace/src/high_level/msg/EventInfo.msg"
 services_str = ""
 pkg_name = "high_level"
 dependencies_str = "std_msgs"

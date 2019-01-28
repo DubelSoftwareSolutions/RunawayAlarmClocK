@@ -3,6 +3,6 @@ prefix=/home/kdabek/ROSWorkspace/install
 Name: high_level
 Description: Description of high_level
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/kdabek/ROSWorkspace/install/include
 Libs: -L/home/kdabek/ROSWorkspace/install/lib 
 Requires: message_generation message_runtime roscpp rospy std_msgs

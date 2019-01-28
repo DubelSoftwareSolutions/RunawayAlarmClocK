@@ -1,3 +1,7 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/high_level_generate_messages_cpp"
+  "/home/kdabek/ROSWorkspace/devel/include/high_level/EventInfo.h"
+)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )

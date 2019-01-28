@@ -53,14 +53,21 @@ CMAKE_BINARY_DIR = /home/kdabek/ROSWorkspace/build
 # Include the progress variables for this target.
 include high_level/CMakeFiles/high_level_generate_messages_eus.dir/progress.make
 
+high_level/CMakeFiles/high_level_generate_messages_eus: /home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/msg/EventInfo.l
 high_level/CMakeFiles/high_level_generate_messages_eus: /home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/manifest.l
 
 
+/home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/msg/EventInfo.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/msg/EventInfo.l: /home/kdabek/ROSWorkspace/src/high_level/msg/EventInfo.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kdabek/ROSWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from high_level/EventInfo.msg"
+	cd /home/kdabek/ROSWorkspace/build/high_level && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/kdabek/ROSWorkspace/src/high_level/msg/EventInfo.msg -Ihigh_level:/home/kdabek/ROSWorkspace/src/high_level/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p high_level -o /home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/msg
+
 /home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kdabek/ROSWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for high_level"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kdabek/ROSWorkspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for high_level"
 	cd /home/kdabek/ROSWorkspace/build/high_level && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level high_level std_msgs
 
 high_level_generate_messages_eus: high_level/CMakeFiles/high_level_generate_messages_eus
+high_level_generate_messages_eus: /home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/msg/EventInfo.l
 high_level_generate_messages_eus: /home/kdabek/ROSWorkspace/devel/share/roseus/ros/high_level/manifest.l
 high_level_generate_messages_eus: high_level/CMakeFiles/high_level_generate_messages_eus.dir/build.make
 

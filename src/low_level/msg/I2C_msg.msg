@@ -1,0 +1,4 @@
+uint16 SharpFrontLeft
+uint16 SharpFrontRight
+uint16 SharpTop
+uint16 KtirBottom

@@ -1,2 +1,2 @@
-set(low_level_MESSAGE_FILES "")
-set(low_level_SERVICE_FILES "")
+set(low_level_MESSAGE_FILES "/home/kdabek/ROSWorkspace/src/low_level/msg/LCD_msg.msg;/home/kdabek/ROSWorkspace/src/low_level/msg/Motor_msg.msg;/home/kdabek/ROSWorkspace/src/low_level/msg/PWM_msg.msg;/home/kdabek/ROSWorkspace/src/low_level/msg/GPIO_msg.msg;/home/kdabek/ROSWorkspace/src/low_level/msg/Keyboard_msg.msg;/home/kdabek/ROSWorkspace/src/low_level/msg/I2C_msg.msg")
+set(low_level_SERVICE_FILES "/home/kdabek/ROSWorkspace/src/low_level/srv/TimeService.srv")

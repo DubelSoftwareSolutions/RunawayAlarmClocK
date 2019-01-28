@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(high_level_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/kdabek/ROSWorkspace/devel/include " STREQUAL " ")
   set(high_level_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/kdabek/ROSWorkspace/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")

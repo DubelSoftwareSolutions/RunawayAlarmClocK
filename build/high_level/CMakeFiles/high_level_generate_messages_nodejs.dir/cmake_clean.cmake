@@ -1,3 +1,7 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/high_level_generate_messages_nodejs"
+  "/home/kdabek/ROSWorkspace/devel/share/gennodejs/ros/high_level/msg/EventInfo.js"
+)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )

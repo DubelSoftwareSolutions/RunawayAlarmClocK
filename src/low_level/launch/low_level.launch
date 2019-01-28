@@ -1,0 +1,9 @@
+<launch>
+	<node name="RosTimeService" pkg="low_level" type="RosTimeService.py"/>
+	<node name="GPIO_InputController" pkg="low_level" type="GPIO_InputController.py"/>
+	<node name="GPIO_InputOutputController" pkg="low_level" type="GPIO_InputOutputController.py"/>
+	<node name="I2C_InputOutputController" pkg="low_level" type="I2C_InputOutputController.py"/>
+	<node name="LCD_Controller" pkg="low_level" type="LCD_Controller.py"/>
+	<node name="MotorController" pkg="low_level" type="MotorController.py"/>
+	<node name="PWM_OutputController" pkg="low_level" type="PWM_OutputController.py"/>
+</launch>

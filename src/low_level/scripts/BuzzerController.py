@@ -1,11 +1,15 @@
+#!/usr/bin/python
+
 import time
 import RPi.GPIO as GPIO
 import rospy
-from high_level import EventInfo
-from low_level import PWM_msg
+from high_level.msg import EventInfo
+from low_level.msg import PWM_msg
 
-QueueSize = 100
+QueueSize = 10
 PWM_Message = PWM_msg()
+PWM_Message.Device = "Buzzer"
+PWM_Message.
 AlarmStarted = False
 
 def Buzzer_callback(data):
@@ -15,7 +19,7 @@ def Buzzer_callback(data):
 		AlarmStarted = False
 
 def BuzzerController():
-	rospy.init_node('MotorController',anonymous=True)
+	rospy.init_node('BuzzerController',anonymous=True)
 	subscriber = rospy.Subscriber("EventInfo", Event_msg, Buzzer_callback)
 	publisher = rospy.Publisher("PWM_Output", PWM_msg, queue_size=QueueSize)
 	

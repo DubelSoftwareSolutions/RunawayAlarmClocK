@@ -1,36 +1,31 @@
+#!/usr/bin/python
+
 import time
-import RPi.GPIO as GPIO
 import rospy
-from low_level import I2C_msg
+from low_level.msg import I2C_msg
+from Adafruit_Seesaw import *
 
-ADC1_Address = 0x3F
-ADC1_Address = 0x40
-ADC1_Address = 0x41
+SeeSaw = Seesaw()
+ADCreadings = I2C_msg()
+publisherI2C = rospy.Publisher("ADCData", I2C_msg, queue_size=10)
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(ADC1I2C_PinNumber, GPIO.OUT)
-GPIO.setup(ADC2I2C_PinNumber, GPIO.OUT)
-GPIO.setup(ADC3I2C_PinNumber, GPIO.OUT)
+def readADC():
+	rosrate = rospy.Rate(1000)
+	while not rospy.is_shutdown():
+		ADCreadings.SharpFrontLeft = SeeSaw.analog_read(ADC_INPUT_0_PIN)
+		ADCreadings.SharpFrontRight = SeeSaw.analog_read(ADC_INPUT_1_PIN)
+		ADCreadings.SharpTop = SeeSaw.analog_read(ADC_INPUT_2_PIN)
+		ADCreadings.KtirBottom = SeeSaw.analog_read(ADC_INPUT_3_PIN)
+	
+		publisherI2C.publish(ADCreadings)
+		rosrate.sleep()
 
-def I2C_callback(data):
-	if (data.Device == "LCD"):
-		GPIO_PinNumber = ADC1I2C_PinNumber
-	elif (data.Device == "ADC2"):
-		GPIO_PinNumber = ADC2I2C_PinNumber
-	elif (data.Device == "ADC3"):
-		GPIO_PinNumber = ADC3I2C_PinNumber
-	GPIO_I2C_Pin = GPIO.I2C(GPIO_PinNumber, I2Cfrequency)  
-	GPIO_I2C_Pin.ChangeDutyCycle(data.DutyCycle)
-	if (data.I2C_on == True):
-		GPIO_I2C_Pin.start(0)
-	else:
-		GPIO_I2C_Pin.stop()
-
-def I2C_OutputController():
-	rospy.init_node('I2C_OutputController',anonymous=True)
-	rospy.Subscriber("I2C_Output", I2C_msg, I2C_callback)
+def I2C_InputOutputController():
+	rospy.init_node('I2C_InputOutputController',anonymous=True)
+	try:
+		readADC()
+	except rospy.ROSInterruptException: pass
 	rospy.spin()
 		
 if __name__ == '__main__':
-	I2C_OutputController()
-	GPIO.cleanup()
+	I2C_InputOutputController()
