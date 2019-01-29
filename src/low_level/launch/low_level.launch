@@ -6,4 +6,5 @@
 	<node name="LCD_Controller" pkg="low_level" type="LCD_Controller.py"/>
 	<node name="MotorController" pkg="low_level" type="MotorController.py"/>
 	<node name="PWM_OutputController" pkg="low_level" type="PWM_OutputController.py"/>
+	<node name="EventGenerator" pkg="high_level" type="EventGenerator.py"/>
 </launch>
