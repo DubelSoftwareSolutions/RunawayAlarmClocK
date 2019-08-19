@@ -1,2 +1,3 @@
 ./build/* linguist-vendored
 ./devel/* linguist-vendored
+./src/* linguist-vendored=false
