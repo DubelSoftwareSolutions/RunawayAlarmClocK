@@ -1,3 +1,8 @@
+* linguist-vendored
+*.py linguist-vendored=false
+*.xml linguist-vendored=false
+*.msg linguist-vendored=false
+*.srv  linguist-vendored=false
 ./build/* linguist-vendored
 ./devel/* linguist-vendored
 ./src/* linguist-vendored=false
